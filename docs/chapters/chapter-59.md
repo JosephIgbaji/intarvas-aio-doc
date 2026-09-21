@@ -1486,7 +1486,7 @@ keyboard errors (typos, missing numbers, etc.).
 </div>
 
 <div class="doc-img-container">
-  <img src="/images/intarvas IMGs/SECTION 59 IMG File GALLERY INTARVAS APP.png" alt="File Gallery and Central Document Archive" />
+  <img src="/images/intarvas IMGs/SECTION 59 IMG FILE GALLERY INTARVAS APP.png" alt="File Gallery and Central Document Archive" />
   
 </div>
 

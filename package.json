@@ -1,0 +1,26 @@
+{
+  "name": "intarvas-aio-doc",
+  "version": "1.0.0",
+  "description": "Comprehensive documentation and wiki portal for the INTARVAS AIO platform",
+  "type": "module",
+  "scripts": {
+    "build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "intarvas-aio",
+    "documentation",
+    "wiki",
+    "intarvas",
+    "crm",
+    "call-center",
+    "omnichannel"
+  ],
+  "author": "INTARVAS AIO Team",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

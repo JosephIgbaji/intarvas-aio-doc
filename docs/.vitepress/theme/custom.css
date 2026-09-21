@@ -1,0 +1,268 @@
+:root {
+  /* LIGHT THEME */
+  --intarvas-primary: #0A0F8F;
+  --intarvas-primary-hover: #080C75;
+  --intarvas-primary-light: #EEF0FD;
+  --intarvas-primary-border: #DFE0F8;
+
+  --vp-c-brand-1: var(--intarvas-primary);
+  --vp-c-brand-2: var(--intarvas-primary-hover);
+  --vp-c-brand-3: #080C75;
+  --vp-c-brand-soft: var(--intarvas-primary-light);
+
+  /* Sidebar Theme - Light */
+  --vp-sidebar-bg-color: var(--intarvas-primary-light);
+
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.dark {
+  /* DARK THEME */
+  --intarvas-primary: #4F46E5;
+  --intarvas-primary-hover: #4338CA;
+  --intarvas-primary-light: rgba(79, 70, 229, 0.15);
+  --intarvas-primary-border: rgba(79, 70, 229, 0.3);
+
+  --vp-c-brand-1: var(--intarvas-primary);
+  --vp-c-brand-2: var(--intarvas-primary-hover);
+  --vp-c-brand-3: #6366f1;
+  --vp-c-brand-soft: var(--intarvas-primary-light);
+
+  /* Sidebar Theme - Dark */
+  --vp-sidebar-bg-color: #0d1226;
+
+  --vp-c-bg: #0b1120;
+  --vp-c-bg-alt: #0f172a;
+  --vp-c-bg-elv: #1e293b;
+}
+
+/* Navbar Logo Sizing */
+.VPNavBarTitle .logo {
+  height: 24px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Sidebar Styling with INTARVAS Primary Palette */
+.VPSidebar {
+  background-color: var(--vp-sidebar-bg-color) !important;
+  border-right: 1px solid var(--intarvas-primary-border) !important;
+}
+
+/* Group Headers */
+.VPSidebarItem.level-0 > .item .text {
+  color: var(--intarvas-primary) !important;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Active Navigation Item */
+.VPSidebarItem.is-active > .item .link {
+  color: var(--intarvas-primary) !important;
+  background-color: #ffffff !important;
+  border-left: 3px solid var(--intarvas-primary) !important;
+  border-radius: 0 6px 6px 0;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(10, 15, 143, 0.08);
+}
+
+.dark .VPSidebarItem.is-active > .item .link {
+  color: #ffffff !important;
+  background-color: var(--intarvas-primary-light) !important;
+  border-left: 3px solid var(--intarvas-primary) !important;
+  box-shadow: 0 1px 4px rgba(79, 70, 229, 0.2);
+}
+
+.VPSidebarItem.is-active > .item .link .text {
+  color: var(--intarvas-primary) !important;
+}
+
+.dark .VPSidebarItem.is-active > .item .link .text {
+  color: #ffffff !important;
+}
+
+.VPSidebarItem .link:hover {
+  color: var(--intarvas-primary-hover) !important;
+}
+
+/* Image screenshot presentation */
+.doc-img-container {
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  background-color: var(--vp-c-bg-elv);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doc-img-container:hover {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.15);
+}
+
+.doc-img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.doc-img-caption {
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-alt);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.doc-img-caption::before {
+  content: '📸';
+  font-size: 0.9rem;
+}
+
+/* Reference URL Badges */
+.ref-url-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background-color: var(--intarvas-primary-light);
+  color: var(--intarvas-primary);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid var(--intarvas-primary-border);
+}
+
+/* Keyboard hint styles like mdBook */
+kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-family: var(--vp-font-family-mono);
+  line-height: 1.2;
+  color: var(--vp-c-text-1);
+  vertical-align: baseline;
+  background-color: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature grid cards for home page */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-elv);
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  border-color: var(--intarvas-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px var(--intarvas-primary-light);
+}
+
+.feature-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.5rem 0 !important;
+  font-size: 1.15rem !important;
+  color: var(--vp-c-text-1);
+}
+
+.feature-card p {
+  margin: 0 !important;
+  font-size: 0.92rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+}
+
+/* Styled Previous & Next Chapter Navigation */
+.chapter-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0 1rem 0;
+  padding-top: 1.5rem;
+}
+
+.chapter-nav-btn {
+  flex: 1;
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background-color: var(--vp-c-bg-elv);
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.chapter-nav-btn:hover {
+  border-color: var(--intarvas-primary);
+  background-color: var(--intarvas-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px var(--intarvas-primary-light);
+}
+
+.chapter-nav-btn .nav-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--intarvas-primary);
+  margin-bottom: 0.35rem;
+}
+
+.chapter-nav-btn .nav-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  line-height: 1.4;
+}
+
+.chapter-nav-btn.next-btn {
+  text-align: right;
+  margin-left: auto;
+}
+
+.chapter-nav-btn.prev-btn {
+  text-align: left;
+}
+
+.nav-spacer {
+  flex: 1;
+  max-width: 48%;
+}
+
+@media (max-width: 640px) {
+  .chapter-nav-buttons {
+    flex-direction: column;
+  }
+  .chapter-nav-btn, .nav-spacer {
+    max-width: 100%;
+    text-align: left !important;
+  }
+}
